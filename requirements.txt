@@ -1,0 +1,2 @@
+# Day 1: No third-party dependencies yet.
+# Future dependencies will be added here using pinned versions.
