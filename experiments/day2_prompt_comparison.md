@@ -76,12 +76,13 @@ Return exactly this JSON:
 | Avoids invented facts | Mostly — doesn't state a false delivery date, but implies a resolution path isn't guaranteed | Yes — explicitly states it doesn't have the shipping status, no invented details |
 | Output format predictable | Lower — category wording/casing will vary between runs | Higher — enum-constrained and structurally consistent every run |
 | Useful to a business workflow | Low — can't be reliably routed/logged without a fixed taxonomy | High — category and urgency map directly to ticket routing and priority queues |
-| Input tokens | *(run `count_tokens.py` for exact number)* | *(run `count_tokens.py` for exact number)* |
-| Output tokens | *(run `count_tokens.py` for exact number)* | *(run `count_tokens.py` for exact number)* |
+| Input tokens | 66 | 163 |
+| Output tokens | 83 | 95 |
 | Overall rating (1–5) | 2 | 5 |
 
 ---
 
 ## Expected lesson
 
-The detailed prompt (Prompt B) produces a more constrained, repeatable output because it defines the exact category taxonomy, an explicit urgency scale, a word limit, and guardrails against inventing information. It costs more input tokens upfront, but that cost buys consistency — which matters most when the output feeds into an automated workflow rather than being read once by a human. Better prompting isn't "always write more" — it's choosing the smallest amount of context and instruction that reliably produces the result the task actually needs.
+The detailed prompt (Prompt B) produces a more constrained, repeatable output because it defines the exact category taxonomy, an explicit urgency scale, a word limit, and guardrails against inventing information. It costs more input tokens upfront, but that cost buys consistency — which matters most when the output feeds into an automated workflow rather than being read once by 
+a human. Better prompting isn't "always write more" — it's choosing the smallest amount of context and instruction that reliably produces the result the task actually needs.
